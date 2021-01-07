@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Todo} from '@myorg/data';
+import {Todos} from '@myorg/ui';
 
 
 export const App = () => {
@@ -28,13 +29,7 @@ export const App = () => {
   return (
     <>
       <h1>Todos</h1>
-      <ul>
-        {todos.map((todo) => (
-          <li className={'todo'}>
-            {todo.title}
-          </li>
-        ))}
-      </ul>
+      <Todos todos={todos} />
       <button id={'add-todo'} onClick={addTodo}>
         Add Todo
       </button>
